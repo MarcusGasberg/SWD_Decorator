@@ -47,7 +47,6 @@
     <Compile Include="AttackDecorators\AttackDecorator.cs" />
     <Compile Include="AttackDecorators\InflictsBleadDecorator.cs" />
     <Compile Include="AttackDecorators\SwordDecorator.cs" />
-    <Compile Include="DefenciveEquipment.cs" />
     <Compile Include="Defensive\DefensiveEquipment.cs" />
     <Compile Include="Defensive\MailArmor.cs" />
     <Compile Include="IAttack.cs" />

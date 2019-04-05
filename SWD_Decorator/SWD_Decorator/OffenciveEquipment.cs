@@ -6,5 +6,10 @@ namespace SWD_Decorator
         {
             throw new System.NotImplementedException();
         }
+
+        public T GetStat<T>() where T : IStat
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
