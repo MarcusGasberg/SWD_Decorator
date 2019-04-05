@@ -44,9 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attackable.cs" />
-    <Compile Include="DefenciveEquipment.cs" />
+    <Compile Include="Defensive\DefensiveEquipment.cs" />
+    <Compile Include="Defensive\MailArmor.cs" />
     <Compile Include="IAttack.cs" />
     <Compile Include="IEquipment.cs" />
+    <Compile Include="Stats\AttackStat.cs" />
+    <Compile Include="Stats\HealthStat.cs" />
+    <Compile Include="Stats\IStat.cs" />
     <Compile Include="OffenciveEquipment.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerEquipment.cs" />
