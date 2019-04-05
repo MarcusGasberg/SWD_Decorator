@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>SWD_Decorator</RootNamespace>
     <AssemblyName>SWD_Decorator</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefenciveEquipment.cs" />
+    <Compile Include="IAttack.cs" />
+    <Compile Include="IEquipment.cs" />
+    <Compile Include="OffenciveEquipment.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerEquipment.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
