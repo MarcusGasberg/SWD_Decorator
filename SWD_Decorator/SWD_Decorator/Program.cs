@@ -11,10 +11,15 @@ namespace SWD_Decorator
         static void Main(string[] args)
         {
             Player myPlayer = new Player();
+            Player opponentPlayer = new Player();
             myPlayer.Equipment.AddEquipment(new MailArmor());
+            var sword = new Sword();
+            var sharpSword = new SharpDecorator(sword);
+            myPlayer.Equipment.AddEquipment(sharpSword);
             myPlayer.Heal(30);
             myPlayer.Attack(100);
             myPlayer.Attack(100);
+            myPlayer.AttackTarget(opponentPlayer);
 
             Console.ReadLine();
         }

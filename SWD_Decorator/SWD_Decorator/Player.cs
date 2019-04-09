@@ -22,7 +22,7 @@ namespace SWD_Decorator
             Health = Health <= MaxHealth ? Health : MaxHealth;
         }
 
-        public void AttackTarget(Attackable target)
+        public void AttackTarget(IAttackable target)
         {
             var weapons = Equipment.GetWeapons();
             foreach (var weapon in weapons)

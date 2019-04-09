@@ -21,7 +21,7 @@ namespace SWD_Decorator
             var bonus = 0;
             foreach (var playerEquipment in _playerEquipments)
             {
-                bonus += playerEquipment.GetStat<T>().StatValue;
+                bonus += playerEquipment.GetStat<T>()?.StatValue ?? 0;
             }
             return bonus;
         }

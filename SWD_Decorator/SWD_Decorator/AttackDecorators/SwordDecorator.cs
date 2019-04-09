@@ -4,7 +4,7 @@ namespace SWD_Decorator
 {
     public class SwordDecorator : AttackDecorator
     {
-        public override void Attack(Attackable target)
+        public override void Attack(IAttackable target)
         {
             base.Attack(target);
             Swing();
@@ -13,6 +13,10 @@ namespace SWD_Decorator
         private void Swing()
         {
             Console.WriteLine("You swing your sword");
+        }
+
+        public SwordDecorator(IAttack toDecorate) : base(toDecorate)
+        {
         }
     }
 }
