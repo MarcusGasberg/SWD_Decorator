@@ -18,5 +18,10 @@ namespace SWD_Decorator
             return stats.OfType<T>().FirstOrDefault();
 
         }
+
+        public void Attack(Attackable target)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
