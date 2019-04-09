@@ -9,7 +9,7 @@ namespace SWD_Decorator
             ToDecorate = toDecorate;
         }
         
-        public new virtual void Attack(IAttackable target)
+        public override void Attack(IAttackable target)
         {
             ToDecorate.Attack(target);
         }

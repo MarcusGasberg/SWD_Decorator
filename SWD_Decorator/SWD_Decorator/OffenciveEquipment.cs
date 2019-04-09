@@ -7,10 +7,11 @@ namespace SWD_Decorator
     {
         public OffenciveEquipment()
         {
-            
+            Stats = new List<IStat>();
         }
-        protected readonly List<IStat> stats=new List<IStat>();
-        public void Attack(IAttackable target)
+
+        protected readonly List<IStat> Stats;
+        public virtual void Attack(IAttackable target)
         {
             var attack = GetStat<AttackStat>();
             target.Attack(attack.StatValue);
@@ -18,7 +19,7 @@ namespace SWD_Decorator
 
         public T GetStat<T>() where T : IStat
         {
-            return stats.OfType<T>().FirstOrDefault();
+            return Stats.OfType<T>().FirstOrDefault();
         }       
     }
 }

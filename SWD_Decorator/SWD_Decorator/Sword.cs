@@ -4,7 +4,7 @@
     {
         public Sword()
         {
-            stats.Add(new AttackStat(50));
+            Stats.Add(new AttackStat(50));
         }
     }
 }
