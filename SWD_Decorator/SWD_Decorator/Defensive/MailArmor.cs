@@ -7,7 +7,7 @@ namespace SWD_Decorator
         public MailArmor()
         {
             Stats.Add(new HealthStat(20));
-            Stats.Add(new ArmorStat(200));
+            Stats.Add(new ArmorStat(40));
         }
     }
 }

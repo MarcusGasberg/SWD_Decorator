@@ -6,10 +6,10 @@ namespace SWD_Decorator
     {
         void Attack(int attack);
     }
-    public class Attackable:IAttackable
+    public class Attackable : IAttackable
     {
         
-        private int _health=100;
+        private int _health = 100;
         public int Health
         {
             get => _health;
@@ -18,13 +18,8 @@ namespace SWD_Decorator
 
         public void Attack(int attack)
         {
-            Health = attack;
-            if(Health<=0)
-                Console.WriteLine("Attackable is dead!");
-            else
-            {
-                Console.WriteLine($"Attackables health is {Health}");
-            }
+            Health -= attack;
+            Console.WriteLine(Health <= 0 ? "Attackable is dead!" : $"Attackables health is {Health}");
         }
     }
 }

@@ -12,7 +12,9 @@ namespace SWD_Decorator
         {
             Player myPlayer = new Player();
             myPlayer.Equipment.AddEquipment(new MailArmor());
-            Console.WriteLine(myPlayer.Equipment.CalculateTotalStatBonus<HealthStat>());
+            myPlayer.Heal(30);
+            myPlayer.Attack(100);
+            myPlayer.Attack(100);
 
             Console.ReadLine();
         }
