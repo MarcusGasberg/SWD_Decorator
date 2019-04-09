@@ -14,7 +14,9 @@ namespace SWD_Decorator
         public T GetStat<T>() where T : IStat
         {
 
+
             return stats.OfType<T>().FirstOrDefault();
+
         }
     }
 }
