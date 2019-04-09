@@ -11,7 +11,7 @@ namespace SWD_Decorator
         public override void Attack(Attackable target)
         {
             base.Attack(target);
-            _bleedDamage = (GetStat<AttackStat>().AttackBonus / 10);
+            _bleedDamage = (GetStat<AttackStat>().StatValue / 10);
             Bleed();
         }
         

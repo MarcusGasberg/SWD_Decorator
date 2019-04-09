@@ -51,6 +51,7 @@
     <Compile Include="Defensive\MailArmor.cs" />
     <Compile Include="IAttack.cs" />
     <Compile Include="IEquipment.cs" />
+    <Compile Include="Stats\ArmorStat.cs" />
     <Compile Include="Stats\AttackStat.cs" />
     <Compile Include="Stats\HealthStat.cs" />
     <Compile Include="Stats\IStat.cs" />

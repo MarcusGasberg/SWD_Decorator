@@ -10,6 +10,11 @@ namespace SWD_Decorator
     {
         static void Main(string[] args)
         {
+            Player myPlayer = new Player();
+            myPlayer.Equipment.AddEquipment(new MailArmor());
+            Console.WriteLine(myPlayer.Equipment.CalculateTotalStatBonus<HealthStat>());
+
+            Console.ReadLine();
         }
     }
 }

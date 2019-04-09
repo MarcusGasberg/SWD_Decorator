@@ -2,6 +2,6 @@
 {
     public interface IStat
     {
-        
+        int StatValue { get; }
     }
 }
