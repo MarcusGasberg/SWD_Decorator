@@ -1,7 +1,30 @@
+using System;
+
 namespace SWD_Decorator
 {
-    public class Attackable
+    public interface IAttackable
+    {
+        void Attack(int attack);
+    }
+    public class Attackable:IAttackable
     {
         
+        private int _health=100;
+        public int Health
+        {
+            get => _health;
+            set { _health = value; }
+        }
+
+        public void Attack(int attack)
+        {
+            Health = attack;
+            if(Health<=0)
+                Console.WriteLine("Attackable is dead!");
+            else
+            {
+                Console.WriteLine($"Attackables health is {Health}");
+            }
+        }
     }
 }
