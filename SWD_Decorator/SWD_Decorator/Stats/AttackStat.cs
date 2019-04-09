@@ -4,8 +4,8 @@
     {
         public AttackStat(int attackBonus)
         {
-            AttackBonus = attackBonus;
+            StatValue = attackBonus;
         }
-        public int AttackBonus { get; set; }
+        public int StatValue { get; }
     }
 }

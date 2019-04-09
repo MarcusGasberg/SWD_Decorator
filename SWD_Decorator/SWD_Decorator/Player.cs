@@ -2,6 +2,7 @@ namespace SWD_Decorator
 {
     public class Player
     {
-        PlayerEquipment Equipment;
+        public PlayerEquipment Equipment { get; set; } = new PlayerEquipment();
+
     }
 }

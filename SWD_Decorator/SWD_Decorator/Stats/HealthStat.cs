@@ -2,10 +2,13 @@
 {
     public class HealthStat : IStat 
     {
+        private readonly int _healthBonus;
+
         public HealthStat(int healthBonus)
         {
-            HealthBonus = healthBonus;
+            StatValue = healthBonus;
         }
-        public int HealthBonus { get; set; }
+
+        public int StatValue { get; }
     }
 }
