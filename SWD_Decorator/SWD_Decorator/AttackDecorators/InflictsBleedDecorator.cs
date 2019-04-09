@@ -4,11 +4,16 @@ using System.Threading;
 
 namespace SWD_Decorator
 {
-    public class InflictsBleadDecorator : AttackDecorator
+    public class InflictsBleedDecorator : AttackDecorator
     {
         private int _bleedDamage;
+
+        public InflictsBleedDecorator(IAttack toDecorate) : base(toDecorate)
+        {
+        }
+
         public int BleedDamageSpread { get; set; } = 5;
-        public override void Attack(Attackable target)
+        public override void Attack(IAttackable target)
         {
             base.Attack(target);
             _bleedDamage = (GetStat<AttackStat>().StatValue / 10);
@@ -33,5 +38,6 @@ namespace SWD_Decorator
                 Thread.Sleep(1000);
             }
         }
+
     }
 }

@@ -2,16 +2,16 @@ namespace SWD_Decorator
 {
     public abstract class AttackDecorator : OffenciveEquipment
     {
-        protected IAttack BaseAttack;
+        protected readonly IAttack ToDecorate;
 
-        public virtual void AddNewAttackFunctionality(IAttack BaseAttack)
+        public AttackDecorator(IAttack toDecorate)
         {
-            this.BaseAttack = BaseAttack;
+            ToDecorate = toDecorate;
         }
         
-        public virtual void Attack(Attackable target)
+        public new virtual void Attack(IAttackable target)
         {
-            BaseAttack.Attack(target);
+            ToDecorate.Attack(target);
         }
     }
 }

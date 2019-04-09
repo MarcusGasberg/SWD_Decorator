@@ -13,7 +13,7 @@ namespace SWD_Decorator
         public void Attack(IAttackable target)
         {
             var attack = GetStat<AttackStat>();
-           target.Attack(attack.AttackBonus);
+           target.Attack(attack.StatValue);
         }
 
         public T GetStat<T>() where T : IStat

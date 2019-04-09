@@ -46,7 +46,8 @@
   <ItemGroup>
     <Compile Include="Attackable.cs" />
     <Compile Include="AttackDecorators\AttackDecorator.cs" />
-    <Compile Include="AttackDecorators\InflictsBleadDecorator.cs" />
+    <Compile Include="AttackDecorators\InflictsBleedDecorator.cs" />
+    <Compile Include="AttackDecorators\SharpDecorator.cs" />
     <Compile Include="AttackDecorators\SwordDecorator.cs" />
     <Compile Include="Defensive\DefensiveEquipment.cs" />
     <Compile Include="Defensive\MailArmor.cs" />
