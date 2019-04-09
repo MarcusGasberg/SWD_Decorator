@@ -11,6 +11,11 @@ namespace SWD_Decorator
             _playerEquipments.Add(equipment);
         }
 
+        public List<IAttack> GetWeapons()
+        {
+            return _playerEquipments.OfType<IAttack>().ToList();
+        }
+
         public int CalculateTotalStatBonus<T>() where T : IStat
         {
             var bonus = 0;
