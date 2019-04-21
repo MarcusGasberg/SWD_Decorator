@@ -16,7 +16,7 @@ namespace SWD_Decorator
             target.Attack(attack.StatValue);
         }
 
-        public T GetStat<T>() where T : IStat
+        public virtual T GetStat<T>() where T : IStat
         {
             return Stats.OfType<T>().FirstOrDefault();
         }       

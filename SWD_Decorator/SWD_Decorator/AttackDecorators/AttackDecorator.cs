@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace SWD_Decorator
 {
     public abstract class AttackDecorator : OffensiveEquipment
@@ -7,12 +9,16 @@ namespace SWD_Decorator
         protected AttackDecorator(OffensiveEquipment toDecorate)
         {
             _toDecorate = toDecorate;
-            Stats = _toDecorate.Stats;
         }
         
         public override void Attack(IAttackable target)
         {
             _toDecorate.Attack(target);
+        }
+
+        public override T GetStat<T>()
+        {
+            return _toDecorate.GetStat<T>();
         }
     }
 }
