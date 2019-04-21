@@ -4,7 +4,7 @@ namespace SWD_Decorator
 {
     public class SharpDecorator : AttackDecorator
     {
-        public SharpDecorator(IAttack toDecorate) : base(toDecorate)
+        public SharpDecorator(OffensiveEquipment toDecorate) : base(toDecorate)
         {
         }
 

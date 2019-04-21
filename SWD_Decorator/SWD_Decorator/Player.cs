@@ -5,11 +5,13 @@ namespace SWD_Decorator
 {
     public class Player : IAttackable
     {
-        private int _baseHealth = 100;
+        public string Name { get; }
+        private readonly int _baseHealth = 100;
         public PlayerEquipment Equipment { get; set; } = new PlayerEquipment();
 
-        public Player()
+        public Player(string name)
         {
+            Name = name;
             Health = MaxHealth;
         }
 
@@ -20,6 +22,7 @@ namespace SWD_Decorator
         {
             Health += healthToRestore;
             Health = Health <= MaxHealth ? Health : MaxHealth;
+            Console.WriteLine($"{Name} restored {healthToRestore} hp and now has {Health}");
         }
 
         public void AttackTarget(IAttackable target)
@@ -36,7 +39,7 @@ namespace SWD_Decorator
             var damage = attack - Equipment.CalculateTotalStatBonus<ArmorStat>();
             damage = damage >= 0 ? damage : 0;
             Health -= damage;
-            Console.WriteLine(Health <= 0 ? $"Attackable took {damage} damage and is dead!" : $"Attackable took {damage} and its health is {Health}");
+            Console.WriteLine(Health <= 0 ? $"{Name} took {damage} damage and is dead!" : $"{Name} took {damage} and its health is {Health}");
         }
     }
 }

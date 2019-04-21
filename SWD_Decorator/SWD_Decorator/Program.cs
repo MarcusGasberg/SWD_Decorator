@@ -10,14 +10,15 @@ namespace SWD_Decorator
     {
         static void Main(string[] args)
         {
-            Player myPlayer = new Player();
-            Player opponentPlayer = new Player();
+            Player myPlayer = new Player("FrodoSwagginz");
+            Player opponentPlayer = new Player("Gandank");
             myPlayer.Equipment.AddEquipment(new MailArmor());
-            var sword = new Sword();
-            var sharpSword = new SharpDecorator(sword);
-            myPlayer.Equipment.AddEquipment(sharpSword);
-            myPlayer.Heal(30);
+            OffensiveEquipment sword = new Sword();
+            sword = new SharpDecorator(sword);
+            sword = new InflictsBleedDecorator(sword);
+            myPlayer.Equipment.AddEquipment(sword);
             myPlayer.Attack(100);
+            myPlayer.Heal(30);
             myPlayer.Attack(100);
             myPlayer.AttackTarget(opponentPlayer);
 

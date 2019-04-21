@@ -1,17 +1,18 @@
 namespace SWD_Decorator
 {
-    public abstract class AttackDecorator : OffenciveEquipment
+    public abstract class AttackDecorator : OffensiveEquipment
     {
-        protected readonly IAttack ToDecorate;
+        private readonly OffensiveEquipment _toDecorate;
 
-        public AttackDecorator(IAttack toDecorate)
+        protected AttackDecorator(OffensiveEquipment toDecorate)
         {
-            ToDecorate = toDecorate;
+            _toDecorate = toDecorate;
+            Stats = _toDecorate.Stats;
         }
         
         public override void Attack(IAttackable target)
         {
-            ToDecorate.Attack(target);
+            _toDecorate.Attack(target);
         }
     }
 }

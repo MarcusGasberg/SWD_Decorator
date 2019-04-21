@@ -15,7 +15,7 @@ namespace SWD_Decorator
             Console.WriteLine("You swing your sword");
         }
 
-        public SwordDecorator(IAttack toDecorate) : base(toDecorate)
+        public SwordDecorator(OffensiveEquipment toDecorate) : base(toDecorate)
         {
         }
     }

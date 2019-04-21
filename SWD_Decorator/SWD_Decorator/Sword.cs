@@ -1,6 +1,6 @@
 ﻿namespace SWD_Decorator
 {
-    public class Sword : OffenciveEquipment
+    public class Sword : OffensiveEquipment
     {
         public Sword()
         {

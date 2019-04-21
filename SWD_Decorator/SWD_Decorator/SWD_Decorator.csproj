@@ -57,7 +57,7 @@
     <Compile Include="Stats\AttackStat.cs" />
     <Compile Include="Stats\HealthStat.cs" />
     <Compile Include="Stats\IStat.cs" />
-    <Compile Include="OffenciveEquipment.cs" />
+    <Compile Include="OffensiveEquipment.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerEquipment.cs" />
     <Compile Include="Program.cs" />

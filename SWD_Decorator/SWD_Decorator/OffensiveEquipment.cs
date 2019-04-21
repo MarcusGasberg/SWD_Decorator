@@ -3,14 +3,13 @@ using System.Linq;
 
 namespace SWD_Decorator
 {
-    public class OffenciveEquipment : IEquipment, IAttack
+    public class OffensiveEquipment : IEquipment, IAttack
     {
-        public OffenciveEquipment()
+        public OffensiveEquipment()
         {
-            Stats = new List<IStat>();
         }
 
-        protected readonly List<IStat> Stats;
+        public List<IStat> Stats { get; protected set; }= new List<IStat>();
         public virtual void Attack(IAttackable target)
         {
             var attack = GetStat<AttackStat>();
